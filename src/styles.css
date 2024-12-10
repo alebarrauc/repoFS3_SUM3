@@ -1,0 +1,111 @@
+body {
+  background-image: url('../../tienda_vinilos_final-master/src/assets/images/background.jpg');
+
+ 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  margin: 0;
+  padding-top: 20px;
+  color: white;
+}
+
+ /* Estilos para el navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(241, 12, 65, 0.48);
+  padding: 20px 10px;
+  z-index: 1000;
+}
+
+.navbar ul {
+  list-style-type: none; /* Quita los puntos de la lista si estás usando <ul> */
+  margin: 0;
+  padding: 0;
+  display: flex; /* Usa flexbox para alinear los elementos en línea */
+  justify-content: flex-start; /* Alinea los elementos hacia la izquierda */
+}
+
+.navbar li {
+  margin-right: 20px; /* Espacio entre cada ítem de la lista */
+}
+
+.navbar li:last-child {
+  margin-right: 0; /* Elimina el margen derecho del último ítem */
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Estilos para el segundo navbar */
+.second-navbar {
+  position: absolute;
+  top: 10px; /* Asegúrate de que está debajo del primer navbar */
+  left: 0;
+  width: 100%;
+  background-color: rgba(241, 23, 117, 0.526); /* Color de fondo azul */
+  padding: 20px 10px;
+  z-index: 999; /* Debajo del primer navbar */
+  transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Transición para el efecto de deslizamiento */
+  transform: translateY(-100%); /* Inicialmente oculto */
+  visibility: hidden;
+  opacity: 0;
+}
+
+.second-navbar.show {
+  transform: translateY(0); /* Mostrar cuando se agrega la clase 'show' */
+  visibility: visible;
+  opacity: 1;
+}
+/* titulos de las paginas */
+.text-center {
+    color: white;
+}
+
+.card {
+  color: white;
+  display: flex;
+  flex-direction: column; /* Columna para apilar verticalmente el contenido */
+  align-items: center; /* Centra horizontalmente el contenido */
+  justify-content: center; /* Centra verticalmente el contenido */
+  padding: 10px; /* Espaciado interno */
+  border-radius: 0,5px; /* Bordes redondeados */
+  width: fit-content; /* Ancho ajustado al contenido */
+  margin: auto; /* Centra horizontalmente el elemento */
+}
+
+  .card-title {
+    color: white; /* Color de texto blanco */
+    font-size: 14px; /* Tamaño de fuente pequeño (ajusta según necesites) */
+    font-weight: bold; /* Fuente en negrita (opcional, ajusta según necesites) */
+    align-items: center; /* Centra horizontalmente el contenido */
+    justify-content: center; /* Centra verticalmente el contenido */
+  }
+
+  .card-text {
+    color: rgb(1, 1, 1); /* Color de texto blanco */
+    font-size: 16px; /* Tamaño de fuente pequeño (ajusta según necesites) */
+    font-weight: bold; /* Fuente en negrita (opcional, ajusta según necesites) */
+    align-items: center; /* Centra horizontalmente el contenido */
+    justify-content: center; /* Centra verticalmente el contenido */
+
+  }
+
+   .card:hover {
+    background-color: rgba(118, 3, 206, 0.745);
+    color:aqua;
+  }
+
+
+  .card-text:hover {
+    color: rgb(255, 255, 255); /* Color de texto blanco */
+    font-size: 16px; /* Tamaño de fuente pequeño (ajusta según necesites) */
+    font-weight: bold; /* Fuente en negrita (opcional, ajusta según necesites) */
+  }

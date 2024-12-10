@@ -1,0 +1,53 @@
+<header class="container mt-4">
+    <h1 class="text-center">Rock Industrial</h1>
+</header>
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-4" *ngFor="let vinil of industrialVinyls">
+            <div class="card">
+                <img [src]="vinil.image" class="card-img-top" alt="{{ vinil.name }}" style="border-radius: 30px; max-width: 200px; max-height: 200px;">
+                <div class="card-body">
+                    <h5 class="card-title">{{ vinil.name }}</h5>
+                    <p class="card-text">{{ vinil.price | currency }}</p>
+                    <!-- Botón que abre el modal -->
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#purchaseModal">Agregar</button>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+
+<!-- Modal de Confirmación de Compra -->
+<div class="modal fade" id="purchaseModal" tabindex="-1" aria-labelledby="purchaseModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="purchaseModalLabel">Confirmación de Compra</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Vinilo comprado... gracias por tu compra.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Agregar enlace a Bootstrap -->
+<!-- Enlace al archivo CSS de Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" 
+      rel="stylesheet" 
+      integrity="sha384-8X6drQNJB4GfBzp3l/ZFjqveVghvXeuCO1tAZivdYBQy6C/cHk3z1R1N5+0U4zWT" 
+      crossorigin="anonymous">
+
+<!-- Enlace al archivo JavaScript de Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-cshq5WwXTbgmZaNW8AuvmfBb8XubTluFvOVj3N0ljrKPXgsfD8nt1q3g3IDSkMdP" 
+        crossorigin="anonymous"></script>
+
+
+  

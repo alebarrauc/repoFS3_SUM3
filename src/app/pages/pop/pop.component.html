@@ -1,0 +1,21 @@
+
+<header class="container mt-4">
+  <h1 class="text-center">Pop</h1>
+</header>
+
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-4" *ngFor="let vinil of popVinils">
+      <div class="card">
+        <img [src]="vinil.image" class="card-img-top" alt="{{ vinil.name }}" style="border-radius: 30px;" style="max-width: 200px; max-height: 200px;">
+        <div class="card-body">
+          <h5 class="card-title">{{ vinil.name }}</h5>
+          <p class="card-text">{{ vinil.price | currency }}</p>
+          <button class="btn btn-primary">Agregar</button>
+        </div>
+      </div>
+      <br>
+    </div>
+  </div>
+</div>
+

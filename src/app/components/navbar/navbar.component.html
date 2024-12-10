@@ -1,0 +1,36 @@
+<!-- Primer Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div class="collapse navbar-collapse">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a routerLink="/home">Home</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/form">Registro Usuarios</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" (click)="showSubNavbar($event)">Vinilos a la venta</a> <!-- Nuevo nav-item -->
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Segundo Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark second-navbar" [ngClass]="{'show': isSubNavbarVisible}">
+  <div class="collapse navbar-collapse">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/rock">Rock</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/pop">Pop</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/ost">Bandas Sonoras</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/industrial">Rock Industrial</a>
+      </li>
+    </ul>
+  </div>
+</nav>
